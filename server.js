@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port =3040;
+const port =3020;
 const data=require('./data.json');
 app.use('/', express.static('public'));
 
@@ -27,6 +27,7 @@ app.get('/hello',(req,res) => {
 });
 app.get('/budget',(req,res)=>{
     res.json(data);
+    
 })
 app.listen(port, () => {
   console.log(`Serving at http://localhost:${port}`)
