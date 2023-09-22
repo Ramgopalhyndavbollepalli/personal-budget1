@@ -1,26 +1,9 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
-const port =3020;
+const port =3000;
 const data=require('./data.json');
-app.use('/', express.static('public'));
-
-const budget ={
-    myBudget:[
-    {
-        title: 'Eat out',
-        budget:30
-    
-    },
-    {
-        title:'Rent',
-        budget:350
-    },
-    {
-        title:'Groceries',
-        budget:90
-    },
-]
-};
+app.use(cors());
 app.get('/hello',(req,res) => {
     res.send('Hello World!');
 
@@ -30,5 +13,6 @@ app.get('/budget',(req,res)=>{
     
 })
 app.listen(port, () => {
-  console.log(`Serving at http://localhost:${port}`)
+  console.log("Api Served at http://localhost:"+port);
+  
 });

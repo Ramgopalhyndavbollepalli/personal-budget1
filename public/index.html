@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html">  <!-- 1)This is an SEO Change -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Budget</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
     <link rel="canonical" href="https://google.com">  <!-- 2)This is an SEO Change -->
     <link
 
@@ -15,7 +15,7 @@
 
       rel="stylesheet"/>
 
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./main.css" />
 
 </head>
 
@@ -97,7 +97,7 @@
            
 
     </main>
-    <img src="bp.png" alt="WebDevelopment"> <!-- 3)This is an SEO Change -->
+    <img src="./bp.png" alt="WebDevelopment"> <!-- 3)This is an SEO Change -->
 
     <!-- 2)This is an A11y Change -->
     <div class="skip">
@@ -120,7 +120,14 @@
 
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script> -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+    integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
@@ -286,7 +293,7 @@
         
 
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 console.log(res.data);
                 for (var i = 0; i < res.data.myBudget.length; i++) {
